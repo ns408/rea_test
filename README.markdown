@@ -8,9 +8,11 @@ REA pre-interview questions
 - Takes ages to deploy
 
 #### Purpose
+
 ##### rea_test.sh
 - Setup puppet, facter, git
 - Grab required modules
+
 #### rea_test.pp  
 - Setup apache, passenger, gems
 - Grab application code
