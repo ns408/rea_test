@@ -10,7 +10,7 @@ if [ -f '/etc/debian_version' -a -x '/usr/bin/apt-get' ]
 then
   echo -e "#Debian family\n"
   apt-get -y install puppet facter git 
-  apt-get -y install apache2-threaded-dev libapr1-dev libaprutil1-dev libcurl4-openssl-dev build-essential
+  apt-get -y install apache2-threaded-dev libapr1-dev libaprutil1-dev libcurl4-openssl-dev build-essential apache2-mpm-worker
 elif [ '/etc/redhat-release' -a -x '/usr/bin/yum' ]
 then
   echo -e "#RHEL family\n"

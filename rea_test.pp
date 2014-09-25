@@ -29,6 +29,10 @@ case "$::osfamily" {
      package { ['apache2-threaded-dev', 'libcurl4-openssl-dev', 'build-essential']:
        before => EXEC["passenger-install-apache2-module -a"],
      }
+     exec { "rm -f '/etc/apache2/mods-enabled/passenger.load'":
+       path   => [ '/usr/bin', '/bin', '/usr/local/bin' ],
+       before => EXEC["passenger-install-apache2-module -a"],
+     }
   }
   "RedHat" : {
      package { ['apr-util-devel','libcurl-devel','openssl-devel','apr-devel']: 
@@ -38,23 +42,17 @@ case "$::osfamily" {
   default : { notify{ "Unsupported OS":} }
 }
 
-
 user { "$deploy_user":
   ensure     => present,
   managehome => true,
 } ->
-class { 'apache': } ->
-class { "apache::dev": }
-
 rbenv::install { "$deploy_user":
   group  => "$deploy_user",
-}
-
+} ->
 rbenv::compile { "$main_ruby":
   user   => "$deploy_user",
   global => true,
-}
-
+} ->
 rbenv::gem { "rake":
   user   => "$deploy_user",
   ruby   => "$main_ruby",
@@ -81,19 +79,14 @@ rbenv::gem { "rake":
   ensure => "$tilt_version";
 } ->
 exec { "passenger-install-apache2-module -a":
-  path => [ "/home/${deploy_user}/.rbenv/shims", "/home/${deploy_user}/.rbenv/bin", "/home/${deploy_user}/.rbenv/versions/${main_ruby}/bin" , '/usr/bin', '/bin', '/usr/local/bin', '/usr/local/sbin', '/sbin', '/usr/sbin' ],
-  unless => "[ -f ${mod_passenger_location} ]",
+  user    => "$deploy_user",
+  path    => [ "/home/${deploy_user}/.rbenv/shims", "/home/${deploy_user}/.rbenv/bin", "/home/${deploy_user}/.rbenv/versions/${main_ruby}/bin" , '/usr/bin', '/bin', '/usr/local/bin', '/usr/local/sbin', '/sbin', '/usr/sbin' ],
+  unless  => "[ -f ${mod_passenger_location} ]",
   require => Rbenvgem["${deploy_user}/${main_ruby}/passenger/${passenger_version}"],
   timeout => 600,
 } ->
-class { "apache::mod::passenger":  
-  mod_package_ensure     => 'absent',
-  mod_path               => "$mod_passenger_location",
-  passenger_root         => "$passenger_location",
-  passenger_ruby         => "${main_ruby_location}/bin/ruby",
-  #passenger_default_ruby => "${main_ruby_location}/bin/ruby",
-}
-
+class { 'apache': } ->
+class { "apache::dev": } ->
 apache::vhost { "${sitename}":
   serveraliases => [
     "www.${sitename}",
@@ -108,6 +101,15 @@ apache::vhost { "${sitename}":
   docroot_group   => "$deploy_user",
   rack_base_uris  => ['/'],
 }
+
+class { "apache::mod::passenger":  
+  mod_package_ensure          => absent,
+  mod_path                    => "$mod_passenger_location",
+  passenger_root              => "$passenger_location",
+  passenger_ruby              => "${main_ruby_location}/bin/ruby",
+  require                     => EXEC["passenger-install-apache2-module -a"],
+}
+
 
 # The following is required for apache::vhost to work since it needs the
 # docroot parent hierarchy to be created. 

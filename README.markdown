@@ -1,6 +1,9 @@
 REA pre-interview questions
 ====
 
+#### Support Systems
+- Tested on CentOS 6x
+
 #### Reason for choosing rbenv:
 - Allows version specifications for gems
 
