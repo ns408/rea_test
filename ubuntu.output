@@ -1,0 +1,171 @@
+#Debian family
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+facter is already the newest version.
+git is already the newest version.
+puppet is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+apache2-dev is already the newest version.
+apache2-mpm-worker is already the newest version.
+build-essential is already the newest version.
+libapr1-dev is already the newest version.
+libapr1-dev set to manually installed.
+libaprutil1-dev is already the newest version.
+libaprutil1-dev set to manually installed.
+libcurl4-openssl-dev is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[mNotice: Preparing to install into /etc/puppet/modules ...[0m
+[mNotice: Downloading from https://forge.puppetlabs.com ...[0m
+[mNotice: Installing -- do not interrupt ...[0m
+/etc/puppet/modules
+└─┬ puppetlabs-concat ([0;36mv1.1.1[0m)
+  └── puppetlabs-stdlib ([0;36mv4.3.2[0m)
+/vagrant/rea_test
+[mNotice: Compiled catalog for vagrant-ubuntu-trusty-64.home in environment production in 1.86 seconds[0m
+[mNotice: /Stage[main]/Main/Package[apache2-threaded-dev]/ensure: ensure changed 'purged' to 'present'[0m
+[mNotice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created[0m
+[mNotice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin]/ensure: created[0m
+[mNotice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin/concatfragments.sh]/ensure: defined content as '{md5}7bbe7c5fce25a5ddd20415d909ba44fc'[0m
+[mNotice: /Stage[main]/Main/User[appuser1]/ensure: created[0m
+[mNotice: /Stage[main]/Main/Exec[rm -f '/etc/apache2/mods-enabled/passenger.load']/returns: executed successfully[0m
+[mNotice: /Stage[main]/Rbenv::Dependencies::Ubuntu/Package[libxslt1-dev]/ensure: ensure changed 'purged' to 'present'[0m
+[mNotice: /Stage[main]/Rbenv::Dependencies::Ubuntu/Package[git]/ensure: ensure changed 'purged' to 'present'[0m
+[mNotice: /Stage[main]/Rbenv::Dependencies::Ubuntu/Package[libyaml-dev]/ensure: ensure changed 'purged' to 'present'[0m
+[mNotice: /Stage[main]/Rbenv::Dependencies::Ubuntu/Package[autoconf]/ensure: ensure changed 'purged' to 'present'[0m
+[mNotice: /Stage[main]/Rbenv::Dependencies::Ubuntu/Package[bison]/ensure: ensure changed 'purged' to 'present'[0m
+[mNotice: /Stage[main]/Main/File[/home/appuser1/localhost.localdomain]/ensure: created[0m
+[mNotice: /Stage[main]/Main/File[/home/appuser1/localhost.localdomain/simple-sinatra]/ensure: created[0m
+[mNotice: /Stage[main]/Main/File[/home/appuser1/localhost.localdomain/logs]/ensure: created[0m
+[mNotice: /Stage[main]/Rbenv::Dependencies::Ubuntu/Package[libreadline6-dev]/ensure: ensure changed 'purged' to 'present'[0m
+[mNotice: /Stage[main]/Main/Rbenv::Install[appuser1]/Exec[rbenv::checkout appuser1]/returns: executed successfully[0m
+[mNotice: /Stage[main]/Main/Rbenv::Install[appuser1]/File[rbenv::rbenvrc appuser1]/ensure: defined content as '{md5}045cd791c8c4b6dac4ac1a70cdafc593'[0m
+[mNotice: /Stage[main]/Main/Rbenv::Install[appuser1]/Exec[rbenv::shrc appuser1]/returns: executed successfully[0m
+[mNotice: /Stage[main]/Main/Rbenv::Install[appuser1]/File[rbenv::cache-dir appuser1]/ensure: created[0m
+[mNotice: /Stage[main]/Main/Rbenv::Compile[1.9.3-p484]/Rbenv::Plugin::Rubybuild[rbenv::rubybuild::appuser1]/Rbenv::Plugin[rbenv::plugin::rubybuild::appuser1]/File[rbenv::plugins appuser1]/ensure: created[0m
+[mNotice: /Stage[main]/Main/Rbenv::Compile[1.9.3-p484]/Rbenv::Plugin::Rubybuild[rbenv::rubybuild::appuser1]/Rbenv::Plugin[rbenv::plugin::rubybuild::appuser1]/Exec[rbenv::plugin::checkout appuser1 ruby-build]/returns: executed successfully[0m
+[mNotice: /Stage[main]/Main/Rbenv::Compile[1.9.3-p484]/Rbenv::Plugin::Rubybuild[rbenv::rubybuild::appuser1]/Rbenv::Plugin[rbenv::plugin::rubybuild::appuser1]/Exec[rbenv::plugin::update appuser1 ruby-build]/returns: executed successfully[0m
+[mNotice: /Stage[main]/Main/Rbenv::Compile[1.9.3-p484]/Exec[rbenv::compile appuser1 1.9.3-p484]/returns: executed successfully[0m
+[mNotice: /Stage[main]/Main/Rbenv::Compile[1.9.3-p484]/File[rbenv::global appuser1]/ensure: defined content as '{md5}dd6b229649827429acefd1ed44ac0b66'[0m
+[mNotice: /Stage[main]/Main/Rbenv::Compile[1.9.3-p484]/Exec[rbenv::rehash appuser1 1.9.3-p484]/returns: executed successfully[0m
+[mNotice: /Stage[main]/Main/Rbenv::Compile[1.9.3-p484]/Rbenv::Gem[rbenv::bundler appuser1 1.9.3-p484]/Rbenvgem[appuser1/1.9.3-p484/bundler/present]/ensure: created[0m
+[mNotice: /Stage[main]/Main/Rbenv::Gem[passenger]/Rbenvgem[appuser1/1.9.3-p484/passenger/4.0.52]/ensure: created[0m
+[mNotice: /Stage[main]/Main/Rbenv::Gem[tilt]/Rbenvgem[appuser1/1.9.3-p484/tilt/1.4.1]/ensure: created[0m
+[mNotice: /Stage[main]/Main/Exec[appclone]/returns: executed successfully[0m
+[mNotice: /Stage[main]/Main/File[/home/appuser1/localhost.localdomain/simple-sinatra/public]/ensure: created[0m
+[mNotice: /Stage[main]/Main/Rbenv::Gem[rack-protection]/Rbenvgem[appuser1/1.9.3-p484/rack-protection/1.5.3]/ensure: created[0m
+[mNotice: /Stage[main]/Main/Rbenv::Gem[sinatra]/Rbenvgem[appuser1/1.9.3-p484/sinatra/1.4.5]/ensure: created[0m
+[mNotice: /Stage[main]/Main/Exec[passenger-install-apache2-module -a]/returns: executed successfully[0m
+[mNotice: /Stage[main]/Apache/Exec[mkdir /etc/apache2/conf.d]/returns: executed successfully[0m
+[mNotice: /Stage[main]/Apache/File[/etc/apache2/apache2.conf]/content: content changed '{md5}da32fcc6a783acaebf0d74c17c726bf7' to '{md5}3af9ed9b152a0104d428d3fc0c3f1818'[0m
+[mNotice: /Stage[main]/Apache/File[/etc/apache2/sites-enabled/000-default.conf]/ensure: removed[0m
+[mNotice: /Stage[main]/Apache::Mod::Mime/Apache::Mod[mime]/File[mime.load symlink]/target: target changed '../mods-available/mime.load' to '/etc/apache2/mods-available/mime.load'[0m
+[mNotice: /Stage[main]/Apache::Default_mods/Apache::Mod[authz_groupfile]/File[authz_groupfile.load]/content: content changed '{md5}97a3e14926ce7bf5f2d2a7b93ece648d' to '{md5}bf972e82336c72b20d67d871ef77d4ce'[0m
+[mNotice: /Stage[main]/Apache::Mod::Worker/Apache::Mpm[worker]/File[/etc/apache2/mods-available/worker.load]/ensure: defined content as '{md5}3064ef75f030fbf76986f6f073beb113'[0m
+[mNotice: /Stage[main]/Apache::Mod::Reqtimeout/File[reqtimeout.conf]/content: content changed '{md5}40b45155afb3d14263d12e6fc4a98513' to '{md5}81c51851ab7ee7942bef389dc7c0e985'[0m
+[mNotice: /Stage[main]/Apache::Default_mods/Apache::Mod[authz_groupfile]/File[authz_groupfile.load symlink]/ensure: created[0m
+[mNotice: /Stage[main]/Apache::Mod::Worker/Apache::Mpm[worker]/File[/etc/apache2/mods-enabled/worker.load]/ensure: created[0m
+[mNotice: /Stage[main]/Apache::Default_mods/Apache::Mod[authz_user]/File[authz_user.load]/content: content changed '{md5}bcf988f105564ec1e14b78df56a01cd8' to '{md5}69150f8246499e0135580d8cc16eaeab'[0m
+[mNotice: /Stage[main]/Apache::Mod::Mime/File[mime.conf]/content: content changed '{md5}7369c2fd5edf2192edbd6d865b632ae5' to '{md5}2fa646fe615e44d137a5d629f868c107'[0m
+[mNotice: /Stage[main]/Apache::Default_mods/Apache::Mod[access_compat]/File[access_compat.load]/content: content changed '{md5}f7f77b3eb4005749b583ff14b49f8bf1' to '{md5}a3e92887d86700b30a3869d0e8c159d7'[0m
+[mNotice: /Stage[main]/Apache::Default_mods/Apache::Mod[access_compat]/File[access_compat.load symlink]/target: target changed '../mods-available/access_compat.load' to '/etc/apache2/mods-available/access_compat.load'[0m
+[mNotice: /Stage[main]/Apache::Mod::Setenvif/File[setenvif.conf]/content: content changed '{md5}533f5f92761c2c24d6820f1d7d1c45ad' to '{md5}c7ede4173da1915b7ec088201f030c28'[0m
+[mNotice: /Stage[main]/Apache::Mod::Deflate/File[deflate.conf]/content: content changed '{md5}6649a32153b9afdc53f6898b5a10a2d6' to '{md5}35506746efa82c4e203c8a724980bdc6'[0m
+[mNotice: /Stage[main]/Apache::Mod::Negotiation/File[negotiation.conf]/content: content changed '{md5}443398efdd41085bc1a70047f6e61c95' to '{md5}47284b5580b986a6ba32580b6ffb9fd7'[0m
+[mNotice: /Stage[main]/Apache::Mod::Negotiation/Apache::Mod[negotiation]/File[negotiation.conf symlink]/target: target changed '../mods-available/negotiation.conf' to '/etc/apache2/mods-available/negotiation.conf'[0m
+[mNotice: /Stage[main]/Apache::Mod::Alias/Apache::Mod[alias]/File[alias.load symlink]/target: target changed '../mods-available/alias.load' to '/etc/apache2/mods-available/alias.load'[0m
+[mNotice: /Stage[main]/Apache::Mod::Dir/File[dir.conf]/content: content changed '{md5}fe4bc5fa3b3cc7a241fe57f8fabc55a1' to '{md5}c741d8ea840e6eb999d739eed47c69d7'[0m
+[mNotice: /Stage[main]/Apache::Mod::Dir/Apache::Mod[dir]/File[dir.conf symlink]/target: target changed '../mods-available/dir.conf' to '/etc/apache2/mods-available/dir.conf'[0m
+[mNotice: /Stage[main]/Apache::Mod::Deflate/Apache::Mod[deflate]/File[deflate.conf symlink]/target: target changed '../mods-available/deflate.conf' to '/etc/apache2/mods-available/deflate.conf'[0m
+[mNotice: /Stage[main]/Apache::Mod::Deflate/Apache::Mod[deflate]/File[deflate.load]/content: content changed '{md5}6a7a23153796456ee919abdf728fd972' to '{md5}ac4540dd672556b07f900425751f745c'[0m
+[mNotice: /Stage[main]/Apache::Mod::Deflate/Apache::Mod[deflate]/File[deflate.load symlink]/target: target changed '../mods-available/deflate.load' to '/etc/apache2/mods-available/deflate.load'[0m
+[mNotice: /Stage[main]/Apache::Mod::Reqtimeout/Apache::Mod[reqtimeout]/File[reqtimeout.conf symlink]/ensure: created[0m
+[mNotice: /Stage[main]/Apache::Mod::Worker/File[/etc/apache2/mods-available/worker.conf]/ensure: defined content as '{md5}59cf27b20f14393692303b41f3071df6'[0m
+[mNotice: /Stage[main]/Apache::Mod::Worker/Apache::Mpm[worker]/File[/etc/apache2/mods-enabled/worker.conf]/ensure: created[0m
+[mNotice: /Stage[main]/Apache::Mod::Cgid/File[cgid.conf]/content: content changed '{md5}e8a2836392051bde889cf9c137058273' to '{md5}7dffbb5823bcbb9ab4d3e67ab14d38a0'[0m
+[mNotice: /Stage[main]/Apache::Mod::Cgid/Apache::Mod[cgid]/File[cgid.conf symlink]/ensure: created[0m
+[mNotice: /Stage[main]/Apache::Mod::Cgid/Apache::Mod[cgid]/File[cgid.load symlink]/ensure: created[0m
+[mNotice: /Stage[main]/Apache::Mod::Setenvif/Apache::Mod[setenvif]/File[setenvif.load symlink]/target: target changed '../mods-available/setenvif.load' to '/etc/apache2/mods-available/setenvif.load'[0m
+[mNotice: /Stage[main]/Apache::Default_mods/Apache::Mod[auth_basic]/File[auth_basic.load]/content: content changed '{md5}a92c34a3ce5e67e2ecbd272155ebe072' to '{md5}5eec35bb52e1ae9ff5eec602ed1d2374'[0m
+[mNotice: /Stage[main]/Apache::Default_mods/Apache::Mod[auth_basic]/File[auth_basic.load symlink]/target: target changed '../mods-available/auth_basic.load' to '/etc/apache2/mods-available/auth_basic.load'[0m
+[mNotice: /Stage[main]/Apache/Concat[/etc/apache2/ports.conf]/File[/var/lib/puppet/concat/_etc_apache2_ports.conf]/ensure: created[0m
+[mNotice: /Stage[main]/Apache/Concat[/etc/apache2/ports.conf]/File[/var/lib/puppet/concat/_etc_apache2_ports.conf/fragments.concat.out]/ensure: created[0m
+[mNotice: /Stage[main]/Apache::Default_mods/Apache::Mod[authn_file]/File[authn_file.load symlink]/target: target changed '../mods-available/authn_file.load' to '/etc/apache2/mods-available/authn_file.load'[0m
+[mNotice: /Stage[main]/Apache/Apache::Vhost[default]/Concat[15-default.conf]/File[/var/lib/puppet/concat/15-default.conf]/ensure: created[0m
+[mNotice: /Stage[main]/Apache/Apache::Vhost[default]/Concat[15-default.conf]/File[/var/lib/puppet/concat/15-default.conf/fragments]/ensure: created[0m
+[mNotice: /Stage[main]/Apache/Apache::Vhost[default]/Concat::Fragment[default-file_footer]/File[/var/lib/puppet/concat/15-default.conf/fragments/999_default-file_footer]/ensure: defined content as '{md5}e27b2525783e590ca1820f1e2118285d'[0m
+[mNotice: /Stage[main]/Apache/Apache::Vhost[default]/Concat::Fragment[default-docroot]/File[/var/lib/puppet/concat/15-default.conf/fragments/10_default-docroot]/ensure: defined content as '{md5}4313d14f6739a5147d4db8b93b9068b0'[0m
+[mNotice: /Stage[main]/Apache/Apache::Vhost[default]/Concat::Fragment[default-serversignature]/File[/var/lib/puppet/concat/15-default.conf/fragments/80_default-serversignature]/ensure: defined content as '{md5}9bf5a458783ab459e5043e1cdf671fa7'[0m
+[mNotice: /Stage[main]/Apache/Apache::Vhost[default]/Concat::Fragment[default-apache-header]/File[/var/lib/puppet/concat/15-default.conf/fragments/0_default-apache-header]/ensure: defined content as '{md5}c46eea5ff4d7874403fa7a9228888f0e'[0m
+[mNotice: /Stage[main]/Apache/Apache::Vhost[default]/Concat[15-default.conf]/File[/var/lib/puppet/concat/15-default.conf/fragments.concat]/ensure: created[0m
+[mNotice: /Stage[main]/Apache::Mod::Dav/Apache::Mod[dav]/File[dav.load symlink]/ensure: created[0m
+[mNotice: /Stage[main]/Apache::Mod::Reqtimeout/Apache::Mod[reqtimeout]/File[reqtimeout.load symlink]/ensure: created[0m
+[mNotice: /Stage[main]/Apache/Concat[/etc/apache2/ports.conf]/File[/var/lib/puppet/concat/_etc_apache2_ports.conf/fragments.concat]/ensure: created[0m
+[mNotice: /Stage[main]/Apache::Mod::Dir/Apache::Mod[dir]/File[dir.load symlink]/target: target changed '../mods-available/dir.load' to '/etc/apache2/mods-available/dir.load'[0m
+[mNotice: /Stage[main]/Apache::Mod::Mime/Apache::Mod[mime]/File[mime.conf symlink]/target: target changed '../mods-available/mime.conf' to '/etc/apache2/mods-available/mime.conf'[0m
+[mNotice: /Stage[main]/Apache::Mod::Dav_fs/Apache::Mod[dav_fs]/File[dav_fs.load]/content: content changed '{md5}17f662fd023dbaaab9d89f9a11ae58c1' to '{md5}3fa14d6e9f9d8eb25d09ed4823508f6d'[0m
+[mNotice: /Stage[main]/Apache::Mod::Dav_fs/Apache::Mod[dav_fs]/File[dav_fs.load symlink]/ensure: created[0m
+[mNotice: /Stage[main]/Apache::Default_mods/Apache::Mod[authn_core]/File[authn_core.load symlink]/target: target changed '../mods-available/authn_core.load' to '/etc/apache2/mods-available/authn_core.load'[0m
+[mNotice: /Stage[main]/Apache::Mod::Alias/File[alias.conf]/content: content changed '{md5}c6e9f26152898c38e58211c8b362d5c3' to '{md5}cb528041df274fb077800a8e2e64f94e'[0m
+[mNotice: /Stage[main]/Apache/Apache::Vhost[default]/Concat[15-default.conf]/File[/var/lib/puppet/concat/15-default.conf/fragments.concat.out]/ensure: created[0m
+[mNotice: /Stage[main]/Apache::Default_mods/Apache::Mod[authz_host]/File[authz_host.load]/content: content changed '{md5}f529587409471e3feb62256bccaf538a' to '{md5}4b8162e3e3a58d1dc2222e2ad352bd93'[0m
+[mNotice: /Stage[main]/Apache::Default_mods/Apache::Mod[authz_host]/File[authz_host.load symlink]/target: target changed '../mods-available/authz_host.load' to '/etc/apache2/mods-available/authz_host.load'[0m
+[mNotice: /Stage[main]/Apache::Mod::Alias/Apache::Mod[alias]/File[alias.conf symlink]/target: target changed '../mods-available/alias.conf' to '/etc/apache2/mods-available/alias.conf'[0m
+[mNotice: /Stage[main]/Apache::Default_mods/Apache::Mod[authz_core]/File[authz_core.load symlink]/target: target changed '../mods-available/authz_core.load' to '/etc/apache2/mods-available/authz_core.load'[0m
+[mNotice: /Stage[main]/Apache::Mod::Negotiation/Apache::Mod[negotiation]/File[negotiation.load symlink]/target: target changed '../mods-available/negotiation.load' to '/etc/apache2/mods-available/negotiation.load'[0m
+[mNotice: /Stage[main]/Apache/Concat[/etc/apache2/ports.conf]/File[/var/lib/puppet/concat/_etc_apache2_ports.conf/fragments]/ensure: created[0m
+[mNotice: /Stage[main]/Apache/Apache::Vhost[default]/Apache::Listen[80]/Concat::Fragment[Listen 80]/File[/var/lib/puppet/concat/_etc_apache2_ports.conf/fragments/10_Listen 80]/ensure: defined content as '{md5}d5fcefc335117f400d451de47efeca87'[0m
+[mNotice: /Stage[main]/Apache/Apache::Vhost[default]/Concat::Fragment[default-directories]/File[/var/lib/puppet/concat/15-default.conf/fragments/50_default-directories]/ensure: defined content as '{md5}8ff31744e3547f101e64881268749b9d'[0m
+[mNotice: /Stage[main]/Apache/File[/etc/apache2/sites-available/default-ssl.conf]/ensure: removed[0m
+[mNotice: /Stage[main]/Apache::Mod::Setenvif/Apache::Mod[setenvif]/File[setenvif.conf symlink]/target: target changed '../mods-available/setenvif.conf' to '/etc/apache2/mods-available/setenvif.conf'[0m
+[mNotice: /Stage[main]/Apache::Mod::Autoindex/Apache::Mod[autoindex]/File[autoindex.load symlink]/target: target changed '../mods-available/autoindex.load' to '/etc/apache2/mods-available/autoindex.load'[0m
+[mNotice: /Stage[main]/Apache::Mod::Passenger/File[passenger.conf]/ensure: defined content as '{md5}07b9528599d476ad26f7827c5aac042b'[0m
+[mNotice: /Stage[main]/Apache::Mod::Passenger/Apache::Mod[passenger]/File[passenger.load]/ensure: defined content as '{md5}64359d5adbbfb8a64b91d1caccaa2df3'[0m
+[mNotice: /Stage[main]/Apache::Mod::Passenger/Apache::Mod[passenger]/File[passenger.load symlink]/ensure: created[0m
+[mNotice: /Stage[main]/Apache::Mod::Passenger/Apache::Mod[passenger]/File[passenger.conf symlink]/ensure: created[0m
+[mNotice: /Stage[main]/Apache::Mod::Autoindex/File[autoindex.conf]/content: content changed '{md5}bfba7d77669e02b869b92e98215d58fc' to '{md5}2421a3c6df32c7e38c2a7a22afdf5728'[0m
+[mNotice: /Stage[main]/Apache::Mod::Autoindex/Apache::Mod[autoindex]/File[autoindex.conf symlink]/target: target changed '../mods-available/autoindex.conf' to '/etc/apache2/mods-available/autoindex.conf'[0m
+[mNotice: /Stage[main]/Apache/Apache::Vhost[default]/Concat::Fragment[default-logging]/File[/var/lib/puppet/concat/15-default.conf/fragments/70_default-logging]/ensure: defined content as '{md5}1b65723b465705c7bbec89027f4c277f'[0m
+[mNotice: /Stage[main]/Apache/Concat::Fragment[Apache ports header]/File[/var/lib/puppet/concat/_etc_apache2_ports.conf/fragments/10_Apache ports header]/ensure: defined content as '{md5}afe35cb5747574b700ebaa0f0b3a626e'[0m
+[mNotice: /Stage[main]/Apache/Concat[/etc/apache2/ports.conf]/Exec[concat_/etc/apache2/ports.conf]/returns: executed successfully[0m
+[mNotice: /Stage[main]/Apache/Concat[/etc/apache2/ports.conf]/Exec[concat_/etc/apache2/ports.conf]: Triggered 'refresh' from 4 events[0m
+[mNotice: /Stage[main]/Apache/Concat[/etc/apache2/ports.conf]/File[/etc/apache2/ports.conf]/content: content changed '{md5}a961f23471d985c2b819b652b7f64321' to '{md5}334fa5cddbf9a408ea1ca7a1666b1fc4'[0m
+[mNotice: /Stage[main]/Apache::Default_mods/Apache::Mod[filter]/File[filter.load symlink]/target: target changed '../mods-available/filter.load' to '/etc/apache2/mods-available/filter.load'[0m
+[mNotice: /Stage[main]/Apache/Apache::Vhost[default]/Concat::Fragment[default-access_log]/File[/var/lib/puppet/concat/15-default.conf/fragments/90_default-access_log]/ensure: defined content as '{md5}5e1f83d8624e56538daa6afb2f5510e8'[0m
+[mNotice: /Stage[main]/Apache/Apache::Vhost[default]/Concat[15-default.conf]/Exec[concat_15-default.conf]/returns: executed successfully[0m
+[mNotice: /Stage[main]/Apache/Apache::Vhost[default]/Concat[15-default.conf]/Exec[concat_15-default.conf]: Triggered 'refresh' from 9 events[0m
+[mNotice: /Stage[main]/Apache::Default_mods/Apache::Mod[env]/File[env.load symlink]/target: target changed '../mods-available/env.load' to '/etc/apache2/mods-available/env.load'[0m
+[mNotice: /Stage[main]/Apache/File[/etc/apache2/sites-available/000-default.conf]/ensure: removed[0m
+[mNotice: /Stage[main]/Apache/Apache::Vhost[default]/Concat[15-default.conf]/File[15-default.conf]/ensure: defined content as '{md5}ec4e3755cc5cd891fd09126ba93f578e'[0m
+[mNotice: /Stage[main]/Apache/Apache::Vhost[default]/File[15-default.conf symlink]/ensure: created[0m
+[mNotice: /Stage[main]/Apache::Mod::Dav_fs/File[dav_fs.conf]/content: content changed '{md5}162db96239f13b5416f369b6306d9db6' to '{md5}e36e2951cff0d4df331652ca6fccdb77'[0m
+[mNotice: /Stage[main]/Apache::Mod::Dav_fs/Apache::Mod[dav_fs]/File[dav_fs.conf symlink]/ensure: created[0m
+[mNotice: /Stage[main]/Apache::Default_mods/Apache::Mod[authz_user]/File[authz_user.load symlink]/target: target changed '../mods-available/authz_user.load' to '/etc/apache2/mods-available/authz_user.load'[0m
+[mNotice: /Stage[main]/Apache/File[/etc/apache2/mods-enabled/mpm_event.conf]/ensure: removed[0m
+[mNotice: /Stage[main]/Apache/File[/etc/apache2/mods-enabled/status.load]/ensure: removed[0m
+[mNotice: /Stage[main]/Apache/File[/etc/apache2/mods-enabled/status.conf]/ensure: removed[0m
+[mNotice: /Stage[main]/Apache/File[/etc/apache2/mods-enabled/mpm_event.load]/ensure: removed[0m
+[mNotice: /Stage[main]/Apache::Dev/Package[apache2-prefork-dev]/ensure: ensure changed 'purged' to 'present'[0m
+[mNotice: /Stage[main]/Main/Apache::Vhost[localhost.localdomain]/Concat[10-localhost.localdomain.conf]/File[/var/lib/puppet/concat/10-localhost.localdomain.conf]/ensure: created[0m
+[mNotice: /Stage[main]/Main/Apache::Vhost[localhost.localdomain]/Concat[10-localhost.localdomain.conf]/File[/var/lib/puppet/concat/10-localhost.localdomain.conf/fragments.concat.out]/ensure: created[0m
+[mNotice: /Stage[main]/Main/Apache::Vhost[localhost.localdomain]/Concat[10-localhost.localdomain.conf]/File[/var/lib/puppet/concat/10-localhost.localdomain.conf/fragments.concat]/ensure: created[0m
+[mNotice: /Stage[main]/Main/Apache::Vhost[localhost.localdomain]/Concat[10-localhost.localdomain.conf]/File[/var/lib/puppet/concat/10-localhost.localdomain.conf/fragments]/ensure: created[0m
+[mNotice: /Stage[main]/Main/Apache::Vhost[localhost.localdomain]/Concat::Fragment[localhost.localdomain-serversignature]/File[/var/lib/puppet/concat/10-localhost.localdomain.conf/fragments/80_localhost.localdomain-serversignature]/ensure: defined content as '{md5}9bf5a458783ab459e5043e1cdf671fa7'[0m
+[mNotice: /Stage[main]/Main/Apache::Vhost[localhost.localdomain]/Concat::Fragment[localhost.localdomain-docroot]/File[/var/lib/puppet/concat/10-localhost.localdomain.conf/fragments/10_localhost.localdomain-docroot]/ensure: defined content as '{md5}1a67768d0abda9d27849295d9f8ba657'[0m
+[mNotice: /Stage[main]/Main/Apache::Vhost[localhost.localdomain]/Concat::Fragment[localhost.localdomain-logging]/File[/var/lib/puppet/concat/10-localhost.localdomain.conf/fragments/70_localhost.localdomain-logging]/ensure: defined content as '{md5}9b4ac0e7f4f2b10aa5ce89e4d1251c36'[0m
+[mNotice: /Stage[main]/Main/Apache::Vhost[localhost.localdomain]/Concat::Fragment[localhost.localdomain-file_footer]/File[/var/lib/puppet/concat/10-localhost.localdomain.conf/fragments/999_localhost.localdomain-file_footer]/ensure: defined content as '{md5}e27b2525783e590ca1820f1e2118285d'[0m
+[mNotice: /Stage[main]/Main/Apache::Vhost[localhost.localdomain]/Concat::Fragment[localhost.localdomain-directories]/File[/var/lib/puppet/concat/10-localhost.localdomain.conf/fragments/50_localhost.localdomain-directories]/ensure: defined content as '{md5}5e5f3b6b0c5e7970b06517b335426611'[0m
+[mNotice: /Stage[main]/Main/Apache::Vhost[localhost.localdomain]/Concat::Fragment[localhost.localdomain-access_log]/File[/var/lib/puppet/concat/10-localhost.localdomain.conf/fragments/90_localhost.localdomain-access_log]/ensure: defined content as '{md5}be14da697fc7d8fb1c30a0d24c466577'[0m
+[mNotice: /Stage[main]/Main/Apache::Vhost[localhost.localdomain]/Concat::Fragment[localhost.localdomain-apache-header]/File[/var/lib/puppet/concat/10-localhost.localdomain.conf/fragments/0_localhost.localdomain-apache-header]/ensure: defined content as '{md5}b853c4bafe59495a12247c0eefa0304c'[0m
+[mNotice: /Stage[main]/Main/Apache::Vhost[localhost.localdomain]/Concat::Fragment[localhost.localdomain-rack]/File[/var/lib/puppet/concat/10-localhost.localdomain.conf/fragments/140_localhost.localdomain-rack]/ensure: defined content as '{md5}fbb6632822a23ec9fc238f8925a9cf92'[0m
+[mNotice: /Stage[main]/Main/Apache::Vhost[localhost.localdomain]/Concat::Fragment[localhost.localdomain-serveralias]/File[/var/lib/puppet/concat/10-localhost.localdomain.conf/fragments/180_localhost.localdomain-serveralias]/ensure: defined content as '{md5}2a727ad857dd59b42adacaa7819ad907'[0m
+[mNotice: /Stage[main]/Main/Apache::Vhost[localhost.localdomain]/Concat[10-localhost.localdomain.conf]/Exec[concat_10-localhost.localdomain.conf]/returns: executed successfully[0m
+[mNotice: /Stage[main]/Main/Apache::Vhost[localhost.localdomain]/Concat[10-localhost.localdomain.conf]/Exec[concat_10-localhost.localdomain.conf]: Triggered 'refresh' from 11 events[0m
+[mNotice: /Stage[main]/Main/Apache::Vhost[localhost.localdomain]/Concat[10-localhost.localdomain.conf]/File[10-localhost.localdomain.conf]/ensure: defined content as '{md5}474f3baebd20f7f157ba322d9d52ec18'[0m
+[mNotice: /Stage[main]/Main/Apache::Vhost[localhost.localdomain]/File[10-localhost.localdomain.conf symlink]/ensure: created[0m
+[mNotice: /Stage[main]/Apache::Service/Service[httpd]: Triggered 'refresh' from 61 events[0m
+[mNotice: Finished catalog run in 931.79 seconds[0m
