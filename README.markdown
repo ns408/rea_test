@@ -3,8 +3,9 @@ REA pre-interview questions
 
 #### Reason for choosing rbenv:
 - Allows version specifications for gems
+
 ##### Drawbacks
-- Take ages to deploy
+- Takes ages to deploy
 
 #### Purpose
 ##### rea_test.sh
