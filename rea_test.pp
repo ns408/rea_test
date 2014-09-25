@@ -41,6 +41,7 @@ class { 'apache': } ->
 class { 'apache::dev': }
 
 class { 'apache::mod::passenger':  
+  mod_package_ensure     => 'absent',
   mod_path               => "$mod_passenger_location",
   passenger_root         => "$passenger_location",
   passenger_ruby         => "$main_ruby_location/bin/ruby",

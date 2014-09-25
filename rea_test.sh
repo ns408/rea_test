@@ -23,3 +23,6 @@ cd $Module_dir
 test -d ${Module_dir}/rbenv || git clone https://github.com/alup/puppet-rbenv rbenv
 test -d ${Module_dir}/apache || git clone https://github.com/puppetlabs/puppetlabs-apache apache
 test -d ${Module_dir}/concat || puppet module install puppetlabs-concat
+cd -
+
+`which puppet` apply rea_test.pp
