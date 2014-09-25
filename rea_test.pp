@@ -26,7 +26,7 @@ $mod_passenger_location  = "${passenger_location}/buildout/apache2/mod_passenger
 # Check passenger requisites here
 case "$::osfamily" {
   "Debian" : { 
-     package { 'libcurl4-openssl-dev': 
+     package { ['apache2-threaded-dev', 'libcurl4-openssl-dev', 'build-essential']:
        before => EXEC["passenger-install-apache2-module -a"],
      }
   }
