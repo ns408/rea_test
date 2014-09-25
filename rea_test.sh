@@ -8,21 +8,26 @@
 
 if [ -f '/etc/debian_version' -a -x '/usr/bin/apt-get' ]
 then
+  echo -e "#Debian family\n"
   apt-get -y install puppet facter git libcurl4-openssl-dev
+  apt-get -y install libcurl4-openssl-dev
 elif [ '/etc/redhat-release' -a -x '/usr/bin/yum' ]
 then
-  yum -y install puppet facter git
+  echo -e "#RHEL family\n"
+  yum -y install puppet facter git 
+  yum -y install httpd-devel apr-util-devel libcurl-devel openssl-devel apr-devel
 else
   echo -e "Unable to recognize the OS"
 fi
 
 # Modules needed for simple-sinatra-app
 Module_dir='/etc/puppet/modules'
-test -d $Module_dir && mkdir -p $Module_dir
+test -d $Module_dir || mkdir -p $Module_dir
 cd $Module_dir
-test -d ${Module_dir}/rbenv || git clone https://github.com/alup/puppet-rbenv rbenv
+test -d ${Module_dir}/rbenv || git clone https://github.com/ns408/puppet-rbenv rbenv
 test -d ${Module_dir}/apache || git clone https://github.com/puppetlabs/puppetlabs-apache apache
-test -d ${Module_dir}/concat || puppet module install puppetlabs-concat
+test -d ${Module_dir}/firewall || git clone https://github.com/puppetlabs/puppetlabs-firewall firewall
+test -d ${Module_dir}/concat || puppet module install puppetlabs-concat # Installing concat installs puppetlabs-stdlib, needed for apache.
 cd -
 
 `which puppet` apply rea_test.pp
